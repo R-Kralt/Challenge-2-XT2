@@ -42,6 +42,10 @@ function getCurrentTime() {
         document.getElementById("aardedag").src = "images/aarde.png";
     }
 
+//date
+    var maanden = new Array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
+    document.getElementById('date').innerHTML = maanden[date.getMonth()] + ' ' + date.getDate();
+
 
     return time;
 }
@@ -49,12 +53,4 @@ function getCurrentTime() {
 initClock();
 
 setInterval(initClock, 1000);
-
-//datum
-
-function getDate() {
-    var maanden = new Array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
-    
-    document.getElementById('date').innerHTML = maanden[day.getMonth()] + ' ' + day.getDate();
-}
 

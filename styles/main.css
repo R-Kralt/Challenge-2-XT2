@@ -25,6 +25,10 @@ h1 {
 	color: white;
 }
 
+#date {
+	font-size: 2em;
+}
+
 #sterren {
 	position: absolute;
 	width: 100%;
