@@ -3,6 +3,9 @@
 body {
 	height: 100vh;
 	background: linear-gradient(rgba(0,212,255,1), rgba(48,48,203,1));
+	max-height: 100vh;
+	overflow: hidden;
+	margin: 0;
 }
 
 .container {
@@ -22,11 +25,66 @@ h1 {
 	color: white;
 }
 
-#wolk1{
-	height: 200%;
+#sterren {
 	position: absolute;
-	top: 25%;
-	left: 45%;
-	transform: translate(-50%, -50%);
-	z-index: -1;
+	width: 100%;
+
 }
+
+#containerzon {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 355px;
+	width: 355px;
+	animation: animatie;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+}
+
+@keyframes animatie {
+    0% {top: -100px;}
+    100% {top: 300px;}
+}
+
+#zon{
+	height: 350px;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, -50%);
+    animation: beweging;
+    animation-delay: 4s;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes beweging {
+	0% {top: 295px;}
+	50% {top: 350px;}
+    100% {top: 295px;}
+}
+
+#containeraarde {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 250px;
+	width: 518px;
+	overflow: hidden;
+	bottom: -140px;
+}
+
+#aardedag {
+	position: relative;
+	height: 500px;
+	bottom: 0px;
+	animation: draaien 60s infinite linear;
+}
+
+@keyframes draaien {
+	 from {
+	 transform: rotate(0deg);
+	 }
+	 to {
+	 transform: rotate(359deg);
+	 }
